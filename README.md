@@ -17,8 +17,15 @@ $ npm install
 ## Ishga tushirish
 
 1. [@BotFather](https://t.me/BotFather) orqali bo't yasab undan TOKEN oling;
-2. .env faylini yasab quyidagilarni kiriting: - TOKEN - PORT - BASE_URL - SECRET_PATH
-   (.env.example faylidan foydalansangiz bo'ladi)
+2. .env faylini yasab quyidagilarni kiriting:
+
+-   TOKEN
+-   PORT
+-   BASE_URL
+-   SECRET_PATH
+
+(.env.example faylidan foydalansangiz bo'ladi)
+
 3. npm run dev
 
 ## Ishlatilgan texnalogiyalar
