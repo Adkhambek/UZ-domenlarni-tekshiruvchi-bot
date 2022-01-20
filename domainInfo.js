@@ -2,7 +2,7 @@ const axios = require("axios");
 const { JSDOM } = require("jsdom");
 const { cctldUrl } = require("./config");
 
-const request = async (domain) => {
+module.exports = async (domain) => {
     const response = await axios.get(`${cctldUrl}/?domain=${domain}`);
     const dom = new JSDOM(response.data);
     const tableResponse =
@@ -20,7 +20,7 @@ const request = async (domain) => {
         return {
             register: true,
             contact: `${cctldUrl}/sendmail/?domain=${domain}`,
-            domain,
+            name: domain,
             status,
             dateCreated,
             activeUntil,
@@ -30,7 +30,7 @@ const request = async (domain) => {
             register: false,
             message:
                 "Домен бош, сиз уни қуйидаги рўйхатга ўтказувчилар орқали роҳатлан ўтказишингиз мумкин:",
-            provider: [
+            providers: [
                 {
                     name: "Ahost",
                     price: "17 000 сум",
@@ -60,5 +60,3 @@ const request = async (domain) => {
         };
     }
 };
-
-request("smartshop.uz");
