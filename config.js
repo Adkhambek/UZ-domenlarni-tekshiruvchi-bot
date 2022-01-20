@@ -5,4 +5,5 @@ module.exports = {
     PORT: process.env.PORT,
     baseUrl: process.env.BASE_URL,
     secretPath: process.env.SECRET_PATH,
+    cctldUrl: "https://cctld.uz/whois",
 };

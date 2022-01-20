@@ -6,7 +6,7 @@ if (process.env.NODE_ENV === "production") {
     bot.telegram.setWebhook(baseUrl + secretPath);
     const app = express();
     app.get("/", (req, res) => res.send("Test"));
-    app.use(bot.webhookCallback(process.env.SECRET_PATH));
+    app.use(bot.webhookCallback(secretPath));
     app.listen(PORT, () => {
         console.log("Bot running in production mode ...");
     });
