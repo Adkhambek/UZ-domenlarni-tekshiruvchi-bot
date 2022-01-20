@@ -24,7 +24,7 @@ $ npm install
 -   BASE_URL
 -   SECRET_PATH
 
-(.env.example faylidan foydalansangiz bo'ladi)
+( .env.example faylidan foydalansangiz bo'ladi )
 
 3. npm run dev
 
